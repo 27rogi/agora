@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap");
 @import "classic.scss";
+@import "utils/signatures.scss";
 
 @tailwind base;
 @tailwind components;
@@ -346,19 +347,7 @@ body.ruminetheme_1 {
                                     }
 
                                     .signature {
-                                        overflow: hidden;
-                                        transition: max-height 2s ease-out;
-                                        @apply mb-2 max-h-16 opacity-50 ease-light relative !font-sans;
-                                        &::before {
-                                            content: "";
-                                            @apply bg-gradient-to-b from-transparent to-white h-full w-full inset-0 z-50 pointer-events-none absolute;
-                                        }
-                                        &:hover {
-                                            @apply max-h-screen opacity-100;
-                                            &::before {
-                                                @apply opacity-0;
-                                            }
-                                        }
+                                        @apply mb-2 relative !font-sans;
                                     }
                                 }
                                 .forum-topicMsgDate {
