@@ -13,8 +13,8 @@
 // @license      MIT
 // ==/UserScript==
 
-function init() {
-    'use strict';
+(function () {
+  ("use strict");
 
     // настройки темы
 
@@ -31,6 +31,4 @@ function init() {
     document.head.insertAdjacentHTML("beforeend", `<link href="http://127.0.0.1:8080/build/root.css" type="text/css" rel="stylesheet">`)
 
     console.log("Тема применилась!")
-};
-
-init();
+})();
