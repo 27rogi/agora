@@ -8,8 +8,8 @@
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // @run-at       document-start
-// @updateURL    https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
-// @downloadURL  https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
+// @updateURL    https://raw.githack.com/rogi27/ruminecraft-theme/main/userscript.user.js
+// @downloadURL  https://raw.githack.com/rogi27/ruminecraft-theme/main/userscript.user.js
 // @license      MIT
 // ==/UserScript==
 
