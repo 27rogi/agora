@@ -33,7 +33,7 @@
     if(hideSignatures) {
         document.body.classList.add("hideSignatures");
     }
-    document.head.insertAdjacentHTML("beforeend", `<link href="https://rawcdn.githack.com/rogi27/ruminecraft-theme/2feb87515c76b4f4d3c2589a1842b62541f2e919/build/theme.css?min=1" type="text/css" rel="stylesheet">`)
+    document.head.insertAdjacentHTML("beforeend", `<link href="https://rawcdn.githack.com/rogi27/ruminecraft-theme/main/build/theme.css?min=1" type="text/css" rel="stylesheet">`)
 
     console.log("Тема применилась!")
 })();
