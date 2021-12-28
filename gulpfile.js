@@ -15,9 +15,10 @@ gulp.task("css", function () {
         require("tailwindcss/nesting"),
         require("tailwindcss"),
         require("autoprefixer"),
+        require("postcss-minify"),
       ])
     )
-    .pipe(sass({ sourceComments: true }).on("error", sass.logError))
+    .pipe(sass({ sourceComments: true, outputStyle: 'compressed' }).on("error", sass.logError))
     .pipe(gulp.dest("build/"));
 });
 

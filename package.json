@@ -19,6 +19,7 @@
     "gulp-sass": "^5.0.0",
     "http-server": "^14.0.0",
     "postcss-import": "^14.0.2",
+    "postcss-minify": "^1.1.0",
     "sass": "^1.45.1"
   }
 }

@@ -1,18 +1,19 @@
 // ==UserScript==
 // @name         RuMinecraft-Theme
-// @namespace    https://ru-minecraft.ru/
+// @namespace    *://ru-minecraft.ru/forum*
 // @version      0.1
 // @description  🪄 A new look for old memories
 // @author       rogi27
-// @match        https://ru-minecraft.ru/forum*
+// @match        *://ru-minecraft.ru/forum*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // @run-at       document-start
 // @updateURL    https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
-// @downloadURL    https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
+// @downloadURL  https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
+// @license      MIT
 // ==/UserScript==
 
-(function() {
+function init() {
     'use strict';
 
     // настройки темы
@@ -30,4 +31,6 @@
     document.head.insertAdjacentHTML("beforeend", `<link href="http://127.0.0.1:8080/build/root.css" type="text/css" rel="stylesheet">`)
 
     console.log("Тема применилась!")
-})();
+};
+
+init();
