@@ -1,0 +1,253 @@
+body.ruminetheme_1.orange {
+    &::before {
+        background: url("https://ru-minecraft.ru/templates/ru-minecraft/images/fondaynew.png") top center repeat,
+            #22333a;
+    }
+
+    .topmenu-wrapper {
+        @apply bg-stone-800/90;
+        .topmenu {
+            .topmenu-list {
+                & > li > ul {
+                    @apply bg-stone-800/90;
+                }
+            }
+        }
+    }
+
+    .conteiner3 {
+        .content {
+            #dle-content {
+                #bullet_energy {
+                    a {
+                        @apply text-rumc-500;
+                        &:hover {
+                            @apply text-rumc-500/50;
+                        }
+                    }
+                    .treeTitl.infoBox {
+                        @apply !bg-rumc-100/20;
+                        h3 {
+                            @apply text-gray-800;
+                        }
+                        .treeDesc {
+                            @apply text-stone-500;
+                        }
+                    }
+                    .navigate_forum {
+                        .main_menu {
+                            @apply bg-stone-300;
+                            li {
+                                a {
+                                    &:hover {
+                                        @apply bg-stone-700/50;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .paginator {
+                        .pagination_forum {
+                            li {
+                                &.active {
+                                    @apply bg-rumc-500/40 text-rumc-600;
+                                }
+                                a {
+                                    @apply bg-stone-300/10;
+                                    &:hover {
+                                        @apply !bg-rumc-300/20;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .top_box {
+                        @apply bg-rumc-200/10;
+                        .forum_speedbar {
+                            ul {
+                                li {
+                                    a {
+                                        @apply text-rumc-500;
+                                        &:hover {
+                                            @apply bg-rumc-300/20;
+                                        }
+                                    }
+                                    &.last {
+                                        a {
+                                            @apply bg-rumc-300/20;
+                                        }
+                                    }
+                                    .arrow {
+                                        &::before {
+                                            @apply text-rumc-500;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contentBoxTopicList {
+                        &:not(.treeBox) {
+                            @apply bg-rumc-100/20;
+                        }
+                        .headerBox.boxList {
+                            @apply bg-rumc-100/20;
+                        }
+                        .listTopicBlock {
+                            .topicList {
+                                @apply bg-gray-50;
+                                .treeIcon {
+                                    @apply bg-rumc-400 m-0;
+                                }
+                                .replyLast {
+                                    @apply bg-rumc-100/20;
+                                }
+                            }
+                        }
+                        &.treeBox {
+                            .tree {
+                                @apply bg-stone-100/20;
+                                .treeTitl {
+                                    h3 {
+                                        @apply text-stone-700;
+                                    }
+                                    .treeDesc {
+                                        @apply text-stone-500/50;
+                                    }
+                                }
+                                ol {
+                                    li {
+                                        &.treeItem {
+                                            .boxTreeItem {
+                                                .treeIcon {
+                                                    @apply bg-rumc-200;
+                                                }
+                                                .replyLast {
+                                                    @apply bg-stone-100/20;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contentBoxTopicMessageList {
+                        a:not(.forum-topicMsgPict .popup_profile) {
+                            @apply text-rumc-500;
+                            &:hover {
+                                @apply bg-rumc-100/20 ring-rumc-100/20;
+                            }
+                        }
+                        .forum-topicMsgCont {
+                            .forum-topicMsgUser {
+                                .forum-topicMsgOnline {
+                                    @apply bg-rumc-300 ring-rumc-300/50;
+                                }
+                            }
+                            .forum-topicMsg {
+                                @apply bg-white shadow-gray-200/20;
+                                #forum-topicMsgShtuff {
+                                    div[id^="MsgTextBox"] {
+                                        div[class^="likeBox-"] {
+                                            > div {
+                                                @apply to-rumc-200/10;
+                                            }
+                                        }
+
+                                        .title_quote {
+                                            @apply !bg-rumc-500/20 !text-stone-700;
+                                        }
+                                        .quote {
+                                            @apply !bg-rumc-100/20 !text-stone-500;
+                                        }
+
+                                        .EditMsgView {
+                                            @apply bg-stone-500/5 text-stone-600/70;
+                                        }
+                                    }
+                                }
+                                .forum-topicMsgDate {
+                                    a {
+                                        &:hover {
+                                            @apply text-rumc-500;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &#postAddTopic {
+                            .form_add_comment {
+                                .bbcode_bullet {
+                                    @apply bg-rumc-50/10;
+                                    .bbcode_forum_text,
+                                    .bbcode_forum {
+                                        li {
+                                            @apply bg-white;
+                                        }
+                                    }
+                                }
+                            }
+                            .addMsgTopic.BoxButtom {
+                                .b01,
+                                #file_upload_button {
+                                    @apply bg-rumc-400/80 !text-white;
+                                    &:hover {
+                                        @apply bg-rumc-300;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .blockRight.userOnlines {
+                        @apply bg-stone-400/5;
+                        a:not(.forum-topicMsgPict .popup_profile) {
+                            @apply text-rumc-50;
+                            &:hover {
+                                @apply bg-rumc-50/20 ring-rumc-50/20;
+                            }
+                        }
+                        .innerts {
+                            .userClin {
+                                p {
+                                    @apply !text-stone-600;
+                                }
+                            }
+                        }
+                        h3 {
+                            @apply !bg-stone-400/10 !text-stone-600;
+                        }
+                    }
+                }
+            }
+            .forumBoxLastInfo {
+                a {
+                    @apply text-stone-500;
+                }
+                @apply bg-stone-400/5;
+                h3 {
+                    @apply !text-stone-600;
+                }
+                table {
+                    @apply bg-stone-500/5;
+                    th {
+                        @apply bg-stone-500/10;
+                    }
+                    tr {
+                        td {
+                            p,
+                            &.topicLastPost p strong {
+                                @apply !text-rumc-600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
