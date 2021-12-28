@@ -1,13 +1,15 @@
 // ==UserScript==
-// @name         Theme
-// @namespace    http://tampermonkey.net/
+// @name         RuMinecraft-Theme
+// @namespace    https://ru-minecraft.ru/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  🪄 A new look for old memories
+// @author       rogi27
 // @match        https://ru-minecraft.ru/forum*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // @run-at       document-start
+// @updateURL    https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
+// @downloadURL    https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/userscript.js
 // ==/UserScript==
 
 (function() {
