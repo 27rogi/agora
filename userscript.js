@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RuMinecraft-Theme
 // @namespace    *://ru-minecraft.ru/forum*
-// @version      0.1
+// @version      1.0.0
 // @description  🪄 A new look for old memories
 // @author       rogi27
 // @match        *://ru-minecraft.ru/forum*
