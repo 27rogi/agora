@@ -28,7 +28,7 @@
     if(classic) {
         document.body.classList.add("orange");
     }
-    document.head.insertAdjacentHTML("beforeend", `<link href="http://127.0.0.1:8080/build/root.css" type="text/css" rel="stylesheet">`)
+    document.head.insertAdjacentHTML("beforeend", `<link href="https://raw.githubusercontent.com/rogi27/ruminecraft-theme/main/build/theme.css" type="text/css" rel="stylesheet">`)
 
     console.log("Тема применилась!")
 })();
