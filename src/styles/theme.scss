@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap");
+
+@import "classic.scss";
+
+/* Components */
+@import "./components/sidebar.scss";
+@import "./components/navbar.scss";
+@import "./components/forum.scss";
+
+@tailwind base;
+@tailwind components;
+
+body.ruminetheme_1 {
+    @apply font-sans;
+
+    /* TopMenu */
+    @include navbar;
+
+    .conteiner3 {
+        @apply border-none rounded-xl flex flex-row max-w-screen-xl bg-gray-50 w-full overflow-visible backdrop-filter backdrop-blur-sm;
+        .content {
+            @apply flex-1 m-0 overflow-visible;
+            .adsense {
+                @apply hidden;
+            }
+            #dle-content {
+                @include forum;
+            }
+        }
+    }
+
+    .forumBoxLastInfo {
+        a {
+            @apply text-cave-200;
+        }
+        @apply border-none rounded-xl bg-cave-50/10 mt-2 mb-0 w-full p-2 !font-sans;
+        h3 {
+            text-shadow: none;
+            @apply rounded-xl font-extrabold !bg-none !border-none !font-sans !my-1 !mx-2 !text-lg !p-2 !text-cave-600;
+        }
+        table {
+            @apply border-none rounded-xl bg-cave-50/10 p-2 overflow-hidden;
+            th {
+                @apply border-none font-sans bg-cave-50/10 text-xs py-2 px-4;
+            }
+            tr {
+                td {
+                    @apply border-none px-4 !py-4;
+                    a {
+                        @apply font-bold;
+                    }
+                    p,
+                    &.topicLastPost p strong {
+                        @apply font-medium !text-cave-600;
+                    }
+                }
+            }
+        }
+    }
+
+    .conteiner3 .sidebar {
+        @include sidebar();
+    }
+}

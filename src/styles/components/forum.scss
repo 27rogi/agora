@@ -1,0 +1,120 @@
+@import "./forum/header.scss";
+@import "./forum/footer.scss";
+@import "./forum/topiclist.scss";
+@import "./forum/message.scss";
+
+@mixin forum {
+    #bullet_energy {
+        @apply bg-transparent border-none font-sans p-0 overflow-visible;
+
+        a {
+            @apply text-cave-50;
+            &:hover {
+                @apply text-cave-50/50;
+            }
+        }
+
+        @include header;
+
+        .paginator {
+            @apply mb-0;
+            .pagination_forum {
+                @apply flex flex-row my-4 mx-4 gap-2 justify-center;
+                .txt_info_pages {
+                    @apply hidden;
+                }
+                li {
+                    @apply mr-0 text-center w-full;
+                    &.active {
+                        @apply border-none rounded-lg font-semibold bg-rumc-100/40 py-1 text-rumc-600;
+                    }
+                    a {
+                        @apply border-none rounded-lg font-semibold bg-cave-100/10 py-1;
+                        &:hover {
+                            @apply bg-cave-100/20 shadow-none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .treeNameList {
+            text-shadow: none;
+            @apply flex-row font-sans mt-4 max-w-4xl px-4 text-4xl;
+        }
+
+        #desTtee {
+            @apply flex flex-row font-sans font-bold text-xl px-4 overflow-visible;
+            a {
+                @apply font-medium text-center text-sm bottom-3 relative;
+                &:first-child {
+                    @apply ml-auto;
+                }
+            }
+        }
+
+        @include topiclist;
+
+        .contentBoxTopicMessageList {
+            @apply border-none !pt-0;
+            a:not(.forum-topicMsgPict .popup_profile) {
+                @apply px-0.5 text-cave-50;
+                &:hover {
+                    @apply rounded-md bg-cave-50/20 ring-1 ring-cave-50/20;
+                }
+            }
+
+            @include message;
+
+            &#postAddTopic {
+                .form_add_comment {
+                    @apply flex flex-col-reverse !border-none;
+                    .bbcode_bullet {
+                        @apply rounded-xl flex flex-row flex-wrap h-full bg-cave-50/10 p-2 gap-1 overflow-visible !border-none;
+                        .bbcode_forum_text,
+                        .bbcode_forum {
+                            @apply overflow-visible !bg-transparent !border-none;
+                            li {
+                                @apply bg-white border-none rounded-md shadow-none transform-gpu transition-all ease-light scale-100;
+                                &:hover {
+                                    @apply scale-150;
+                                }
+                            }
+                        }
+                    }
+                    textarea {
+                        @apply !font-sans;
+                    }
+                }
+                .msgText {
+                    @apply !border-none;
+                }
+                .addMsgTopic.BoxButtom {
+                    @apply bg-transparent flex flex-row flex-wrap m-0 p-0 pt-2 items-center !border-none;
+                    .b01,
+                    #file_upload_button {
+                        @apply border-none rounded-xl bg-cave-50 py-2 !text-white;
+                        &:hover {
+                            @apply bg-cave-300;
+                        }
+                    }
+
+                    .b01,
+                    #file_upload {
+                        @apply w-[49.5%];
+                    }
+                    #file_upload {
+                        #file_upload_button {
+                            @apply w-full;
+                        }
+                    }
+                    .uploadify-queue,
+                    .uploadify-queue-item {
+                        @apply w-full;
+                    }
+                }
+            }
+        }
+        @include footer;
+    }
+}

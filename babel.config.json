@@ -1,0 +1,30 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": "> 0.25%, not dead"
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "pragma": "h",
+        "pragmaFrag": "Fragment",
+        "throwIfNamespace": false, // defaults to true
+        "runtime": "classic" // defaults to classic
+        // "importSource": "custom-jsx-library" // defaults to react (only in automatic runtime)
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "htm",
+      {
+        "pragma": "h"
+      }
+    ],
+    ["@babel/plugin-proposal-class-properties"]
+  ]
+}

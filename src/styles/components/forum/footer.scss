@@ -1,0 +1,34 @@
+@mixin footer {
+    .blockRight.userOnlines {
+        @apply rounded-xl bg-cave-50/10 !font-sans !mx-2;
+        a:not(.forum-topicMsgPict .popup_profile) {
+            @apply px-0.5 text-cave-50;
+            &:hover {
+                @apply rounded-md bg-cave-50/20 ring-1 ring-cave-50/20;
+            }
+        }
+        .conteiner {
+            @apply !bg-transparent !border-none !shadow-none;
+        }
+        .innerts {
+            @apply flex flex-row p-2 items-center justify-between;
+            .userClin {
+                p {
+                    @apply font-medium !text-cave-600;
+                }
+                ul {
+                    a {
+                        @apply text-xs;
+                    }
+                }
+            }
+        }
+        h3 {
+            @apply rounded-xl !bg-none !border-none !font-extrabold !bg-cave-50/20 !my-2 !text-lg !p-2 !text-cave-600;
+        }
+    }
+
+    .forum-GroupList {
+        @apply text-center text-transparent px-4;
+    }
+}

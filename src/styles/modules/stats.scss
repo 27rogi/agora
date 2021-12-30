@@ -1,0 +1,27 @@
+body.hideStats {
+    .forum-topicMsgUser {
+        .forum-topicMsgStat {
+            p {
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    @apply opacity-0 transform-gpu transition-all ease-light scale-x-0;
+                }
+            }
+        }
+
+        &:hover {
+            .forum-topicMsgStat p {
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    @apply opacity-100 scale-x-100;
+                }
+            }
+        }
+    }
+}

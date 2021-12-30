@@ -1,0 +1,113 @@
+@mixin message {
+    .forum-topicMsgCont {
+        @apply border-none shadow-none my-6 px-4 gap-4 relative !mt-0;
+        .forum-topicMsgUser {
+            @apply bg-transparent border-none max-w-[148px] transition ease-light relative !mt-0;
+            .forum-topicMsgPict {
+                @apply bg-transparent p-0;
+                img {
+                    @apply rounded-md mx-auto;
+                }
+            }
+            .forum-topicMsgOnline {
+                @apply rounded-full bg-green-500 h-0 -mt-1 text-transparent ml-5 p-1.5 top-0 ring-2 ring-offset-2 ring-green-500/50 w-0 overflow-hidden absolute;
+            }
+            .forum-topicMsgOffline {
+                @apply hidden;
+            }
+
+            .forum-topicMsgOnOff h4 {
+                @apply text-center !font-sans;
+            }
+
+            .repamsg {
+                @apply text-center;
+            }
+
+            .forum-topicMsgStat {
+                @apply text-center !font-sans;
+            }
+        }
+        .forum-topicMsg {
+            @apply bg-white border-none rounded-xl flex flex-col shadow-xl p-4 transition-all ease-light shadow-gray-200/20 !mt-0;
+            div.clr {
+                @apply !mt-[5%];
+            }
+            #forum-topicMsgShtuff {
+                @apply m-0 p-0;
+                div[id^="MsgTextBox"] {
+                    @apply font-sans;
+                    img {
+                        @apply inline;
+                    }
+                    div[class^="likeBox-"] {
+                        @apply mt-auto;
+                        > div {
+                            @apply from-transparent to-cave-50/10 -mx-4 text-right py-2 !bg-gradient-to-r !bg-transparent !border-none;
+                        }
+                    }
+
+                    .title_quote {
+                        @apply rounded-t-md font-sans -m-2 shadow-none !border-none !bg-cave-100/20 !py-2 !px-2 !text-cave-700;
+                        &:not(:first-child) {
+                            @apply mt-2;
+                        }
+                    }
+                    .quote {
+                        @apply rounded-b-md font-sans shadow-none -mx-2 mt-2 !border-none !bg-cave-100/10 !py-4 !px-2 !text-cave-500;
+                    }
+
+                    .EditMsgView {
+                        @apply bg-none rounded-md bg-cave-50/5 my-2 -mx-2 p-2 text-cave-600/70;
+                    }
+                }
+
+                .signature {
+                    @apply mb-2 relative !font-sans;
+                }
+            }
+            .forum-topicMsgDate {
+                @apply mt-auto my-2;
+                a {
+                    @apply m-1 p-1;
+                    &:hover {
+                        @apply text-cave-500;
+                    }
+                }
+            }
+            img {
+                @apply w-auto;
+            }
+            div[style*="text-align:center;"] {
+                img {
+                    @apply mx-auto;
+                }
+            }
+        }
+
+        /* fix styles for Sab */
+        .ignoreToggleButton {
+            @apply rounded-md bg-cave-100/10 mt-0 p-1 z-20;
+        }
+        /* workaround due to Tailwind's bug */
+        &[class*="hidden"] {
+            @apply flex flex-col h-auto relative;
+            .ignoreToggleButton {
+                @apply h-full bg-cave-50/10 mt-0 p-1 inset-0 z-20;
+            }
+            > .forum-topicMsgUser {
+                @apply hidden;
+            }
+            > .forum-topicMsg {
+                #forum-topicMsgShtuff,
+                .forum-topicMsgDate {
+                    @apply hidden;
+                }
+            }
+        }
+    }
+
+    #counterMessages {
+        @apply border-none rounded-md font-sans font-semibold bg-cave-50/10 shadow-none mx-4 py-2 float-none;
+    }
+}

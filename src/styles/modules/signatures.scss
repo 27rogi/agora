@@ -1,8 +1,7 @@
-body.ruminetheme_1.hideSignatures {
+body.hideSignatures {
     .signature {
-        overflow: hidden;
         transition: max-height 2s ease-out;
-        @apply max-h-16 opacity-50 ease-light;
+        @apply max-h-16 opacity-50 ease-light relative overflow-hidden;
         &::before {
             content: "";
             @apply bg-gradient-to-b from-transparent to-white h-full w-full inset-0 z-50 pointer-events-none absolute;

@@ -1,0 +1,40 @@
+body {
+    &:not(.enableSidebar) {
+        .conteiner3 {
+            .content {
+                @apply w-auto;
+            }
+        }
+    }
+    .conteiner3 {
+        .sidebar {
+            transition: all 0.2s ease-in;
+            @apply w-auto max-w-0 overflow-hidden !mr-0;
+        }
+    }
+    &.ruminetheme_1 {
+        .conteiner3 {
+            .content {
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+}
+
+body.enableSidebar {
+    &.ruminetheme_1 {
+        .conteiner3 {
+            .content {
+                @apply p-2;
+            }
+        }
+    }
+    .conteiner3 {
+        .sidebar {
+            @apply flex flex-col gap-2 !max-w-[999px] !p-2 !overflow-hidden;
+            > div {
+                @apply m-0;
+            }
+        }
+    }
+}

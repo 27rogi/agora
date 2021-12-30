@@ -1,0 +1,76 @@
+@mixin header {
+    .treeTitl.infoBox {
+        @apply rounded-xl flex flex-col m-0 mt-2 p-4 gap-2 !bg-cave-100/10;
+        h3 {
+            @apply font-sans text-gray-600;
+        }
+        .treeDesc {
+            @apply font-sans text-cave-500;
+        }
+    }
+
+    .navigate_forum {
+        @apply m-0;
+        .main_menu {
+            @apply border-none flex flex-row h-auto bg-cave-500 rounded-[0.65rem] shadow-none mt-0 -mb-4 p-2;
+            li {
+                @apply m-0 p-0;
+                &:hover {
+                    @apply bg-transparent;
+                }
+                a {
+                    @apply rounded-xl font-sans font-semibold px-4 transition ease-light duration-150;
+                    &:hover {
+                        @apply bg-cave-700/50;
+                    }
+                }
+            }
+        }
+    }
+
+    .top_box {
+        @apply bg-cave-50/10 rounded-[0.65rem] shadow-none m-0 p-2 pt-8 pb-4;
+        .forum_speedbar {
+            @apply flex flex-row font-medium px-2 overflow-visible !bg-transparent !border-none !shadow-none;
+            ul {
+                @apply flex flex-row gap-4;
+                li {
+                    @apply m-0 text-center p-0;
+                    &:hover {
+                        @apply bg-transparent;
+                    }
+                    a {
+                        @apply rounded-lg font-semibold text-xs text-center py-1.5 px-2 transition ease-light text-cave-500 duration-150;
+                        &:hover {
+                            @apply bg-cave-300/20;
+                        }
+                    }
+                    &.last {
+                        a {
+                            @apply bg-cave-300/20;
+                        }
+                        .arrow {
+                            @apply hidden;
+                        }
+                    }
+                    .arrow {
+                        display: inline-block;
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        @apply border-none left-1.5 relative;
+                        &::before {
+                            @apply text-cave-500;
+                            content: "\f105";
+                        }
+                        span {
+                            @apply border-none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

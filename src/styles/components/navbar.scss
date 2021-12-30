@@ -1,0 +1,24 @@
+@mixin navbar {
+    .topmenu-wrapper {
+        @apply flex flex-col h-auto bg-cave-500/90 shadow-none py-2 backdrop-filter backdrop-blur-sm;
+        .topmenu {
+            @apply flex flex-row max-w-screen-xl w-full px-4 items-center;
+            .topmenu-logo {
+                @apply mr-auto h-8;
+            }
+            .topmenu-list {
+                & > li > ul {
+                    @apply bg-cave-500/90 shadow-none py-2 py-0 left-0 backdrop-filter backdrop-blur-sm;
+                }
+                &.topmenu-nav {
+                    @apply mr-auto;
+                }
+                &.topmenu-profile {
+                    img {
+                        @apply max-h-8;
+                    }
+                }
+            }
+        }
+    }
+}

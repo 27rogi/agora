@@ -1,0 +1,13 @@
+@mixin sidebar {
+    & {
+        .menu-new {
+            @apply border-none rounded-xl bg-cave-500 overflow-hidden;
+            .item {
+                @apply border-none py-4;
+                &:hover {
+                    @apply bg-cave-300;
+                }
+            }
+        }
+    }
+}

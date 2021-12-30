@@ -1,0 +1,84 @@
+@mixin topiclist {
+    .contentBoxTopicList {
+        @apply bg-transparent border-none shadow-none p-2;
+        &:not(.treeBox) {
+            @apply rounded-xl bg-cave-100/10;
+        }
+        .headerBox.boxList {
+            @apply rounded-t-xl bg-cave-100/20 m-0 py-2;
+        }
+        .separatorContentFixed,
+        .sepBoxBot {
+            @apply hidden;
+        }
+        .listTopicBlock {
+            .topicList {
+                @apply rounded-none bg-gray-50 p-2;
+                &:last-child {
+                    @apply rounded-b-xl;
+                }
+                .treeIcon {
+                    @apply rounded-xl bg-cave-100 m-0;
+                }
+                .treeInfoBox,
+                .replyLast {
+                    @apply font-sans;
+                }
+                .replyLast {
+                    @apply border-none rounded-xl flex flex-row bg-cave-100/10 m-2 p-2 gap-2 items-center;
+                    .forum-recentAuthorPict {
+                        @apply top-0 left-0 relative;
+                    }
+                }
+            }
+        }
+        &.treeBox {
+            @apply px-0;
+            .tree {
+                @apply rounded-xl bg-cave-100/10 p-2;
+                .treeTitl {
+                    @apply rounded-xl !bg-transparent !my-2 !mx-0.5;
+                    h3 {
+                        @apply text-cave-700 !font-sans;
+                    }
+                    .treeDesc {
+                        @apply font-medium mt-1 text-cave-500/50 !font-sans;
+                    }
+                }
+                ol {
+                    @apply flex flex-col;
+                    li {
+                        &.treeItem {
+                            &:first-child {
+                                .boxTreeItem {
+                                    @apply rounded-t-xl;
+                                }
+                            }
+                            &:last-child {
+                                .boxTreeItem {
+                                    @apply rounded-b-xl;
+                                }
+                            }
+                            .boxTreeItem {
+                                @apply rounded-none bg-gray-50 mb-0 py-4;
+                                .treeIcon {
+                                    @apply rounded-xl bg-cave-100;
+                                }
+                                .treeInfoBox,
+                                .replyLast {
+                                    @apply font-sans;
+                                }
+                                .replyLast {
+                                    @apply border-none rounded-xl flex flex-row bg-cave-100/10 m-2 p-2 gap-2 items-center;
+                                    .forum-recentAuthorPict {
+                                        @apply top-0 left-0 relative;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

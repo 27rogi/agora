@@ -1,0 +1,65 @@
+#script-config-screen {
+    @apply flex flex-col m-4 right-0 bottom-0 z-50 fixed;
+    .rumc-screen {
+        @apply rounded-xl flex flex-row m-auto max-w-md bg-gray-900/95 p-4 shadow-2xl shadow-stone-900/30 text-white/50 backdrop-filter backdrop-blur-md;
+        .screen__section {
+            @apply flex flex-col;
+            .screen__title {
+                @apply flex flex-row mb-2 items-center;
+                h2 {
+                    @apply font-sans font-semibold mr-auto text-lg text-white;
+                    span {
+                        @apply text-white/50;
+                    }
+                }
+                .title__controls {
+                    @apply flex flex-row text-white gap-2 items-center;
+                }
+            }
+
+            .screen__options {
+                @apply flex flex-row gap-2 items-start justify-center;
+                .screen__option {
+                    @apply rounded-xl flex flex-col bg-gray-600/60 p-2 gap-1 relative;
+                    p {
+                        @apply font-sans font-semibold text-center text-base text-white/90;
+                    }
+                    button {
+                        @apply rounded-md font-medium bg-gray-800/50 text-white text-sm py-2 px-4;
+                        &:hover {
+                            @apply bg-gray-800/90;
+                        }
+                        &.active {
+                            @apply bg-cave-50/90;
+                        }
+                    }
+                }
+            }
+
+            .screen__changelog {
+                @apply rounded-md bg-gray-300/10 mb-2 w-full p-2;
+                .changelog__title {
+                    @apply font-medium text-white text-base mb-2;
+                }
+                ul {
+                    @apply flex flex-col gap-2;
+                    li {
+                        @apply flex flex-row gap-2 items-center;
+                        .badge {
+                            @apply rounded-md bg-cave-50 flex-shrink-0 py-1 px-2 text-gray-50/90;
+                            &_new {
+                                @apply bg-green-600/40;
+                            }
+                            &_fix {
+                                @apply bg-orange-600/40;
+                            }
+                            &_breaking {
+                                @apply bg-red-800/40;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
