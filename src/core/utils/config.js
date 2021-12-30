@@ -43,11 +43,11 @@ const Config = {
 
         if (this.store.redesign) {
             document.body.classList.add("ruminetheme_1");
-            if (!document.head.querySelector('link[href="http://127.0.0.1:8080/dist/theme.css"]')) {
-                document.head.insertAdjacentHTML("beforeend", `<link href="http://127.0.0.1:8080/dist/theme.css" type="text/css" rel="stylesheet">`)
+            if (!document.head.querySelector('link[href="https://raw.githack.com/rogi27/agora/main/dist/theme.css"]')) {
+                document.head.insertAdjacentHTML("beforeend", `<link href="https://raw.githack.com/rogi27/agora/main/dist/theme.css" type="text/css" rel="stylesheet">`)
             }
-        } else if (document.head.querySelector('link[href="http://127.0.0.1:8080/dist/theme.css"]')) {
-            document.head.querySelector('link[href="http://127.0.0.1:8080/dist/theme.css"]').remove();
+        } else if (document.head.querySelector('link[href="https://raw.githack.com/rogi27/agora/main/dist/theme.css"]')) {
+            document.head.querySelector('link[href="https://raw.githack.com/rogi27/agora/main/dist/theme.css"]').remove();
         }
         if (this.store.theme) {
             if (this.store.theme === "orange") document.body.classList.add("orange");
