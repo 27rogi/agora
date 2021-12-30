@@ -1,39 +1,13 @@
 // ==UserScript==
-// @name         RuMinecraft-Theme
-// @namespace    *://ru-minecraft.ru/forum*
-// @version      1.0.1
+// @name         Project Agora
+// @namespace    *://ru-minecraft.ru/*
+// @version      2.0.0
 // @description  🪄 A new look for old memories
 // @author       rogi27
-// @match        *://ru-minecraft.ru/forum*
+// @match        *://ru-minecraft.ru/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @grant        none
+// @grant        GM_setValue
 // @run-at       document-start
-// @updateURL    https://raw.githack.com/rogi27/ruminecraft-theme/main/userscript.user.js
-// @downloadURL  https://raw.githack.com/rogi27/ruminecraft-theme/main/userscript.user.js
 // @license      MIT
+// @require      https://raw.githack.com/rogi27/agora/main/dist/app.js?v=2.0.0
 // ==/UserScript==
-
-(function () {
-  ("use strict");
-
-    // настройки темы
-    // true - да, false - нет
-
-    // использовать серо-оранжевую тему?
-    const classic = false;
-    // скрывать подписи?
-    const hideSignatures = true;
-
-    // конец
-
-    document.body.classList.add("ruminetheme_1");
-    if(classic) {
-        document.body.classList.add("orange");
-    }
-    if(hideSignatures) {
-        document.body.classList.add("hideSignatures");
-    }
-    document.head.insertAdjacentHTML("beforeend", `<link href="https://rawcdn.githack.com/rogi27/ruminecraft-theme/main/build/theme.css?min=1" type="text/css" rel="stylesheet">`)
-
-    console.log("Тема применилась!")
-})();
