@@ -15,7 +15,37 @@ body.ruminetheme_1.orange {
         }
     }
 
+    .ui-dialog.ui-widget {
+        &.ui-widget-content {
+            @apply bg-white/90 shadow-2xl shadow-gray-800/20;
+        }
+        .ui-widget-header {
+            @apply bg-rumc-500 !font-sans;
+        }
+        .ui-dialog-buttonpane {
+            .ui-dialog-buttonset {
+                button {
+                    @apply bg-rumc-500;
+                    &:hover {
+                        @apply bg-rumc-500/90;
+                    }
+                }
+            }
+        }
+    }
+
     .conteiner3 {
+        .sidebar {
+            .menu-new {
+                @apply border-none rounded-xl bg-stone-800 overflow-hidden;
+                .item {
+                    @apply border-none py-4;
+                    &:hover {
+                        @apply bg-rumc-300;
+                    }
+                }
+            }
+        }
         .content {
             #dle-content {
                 #bullet_energy {
@@ -36,11 +66,11 @@ body.ruminetheme_1.orange {
                     }
                     .navigate_forum {
                         .main_menu {
-                            @apply bg-stone-300;
+                            @apply bg-stone-800;
                             li {
                                 a {
                                     &:hover {
-                                        @apply bg-stone-700/50;
+                                        @apply bg-stone-900/50;
                                     }
                                 }
                             }
@@ -173,8 +203,17 @@ body.ruminetheme_1.orange {
                                 }
                                 .forum-topicMsgDate {
                                     a {
+                                        @apply !text-rumc-500;
                                         &:hover {
-                                            @apply text-rumc-500;
+                                            @apply !text-rumc-400;
+                                        }
+                                    }
+
+                                    p:nth-child(2) {
+                                        a {
+                                            &.likeContent {
+                                                @apply bg-rumc-200/10 text-rumc-500;
+                                            }
                                         }
                                     }
                                 }
@@ -243,6 +282,68 @@ body.ruminetheme_1.orange {
                             p,
                             &.topicLastPost p strong {
                                 @apply !text-rumc-600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #script-config-screen {
+        .rumc-screen {
+            @apply bg-stone-900/95 shadow-stone-900/30 text-white/50;
+            .screen__section {
+                .screen__title {
+                    h2 {
+                        @apply text-white;
+                        span {
+                            @apply text-white/50;
+                        }
+                    }
+                    .title__controls {
+                        @apply text-white;
+                    }
+                }
+
+                .screen__options {
+                    .screen__option {
+                        @apply bg-stone-100/10;
+                        p {
+                            @apply text-white/90;
+                        }
+                        button {
+                            @apply bg-stone-800/50 text-white;
+                            &:hover {
+                                @apply bg-stone-800/90;
+                            }
+                            &.active {
+                                @apply bg-stone-100/40;
+                                &:hover {
+                                    @apply bg-stone-100/30;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .screen__changelog {
+                    @apply bg-gray-300/10;
+                    .changelog__title {
+                        @apply text-white;
+                    }
+                    ul {
+                        li {
+                            .badge {
+                                @apply bg-cave-50 text-gray-50/90;
+                                &_new {
+                                    @apply bg-green-600/40;
+                                }
+                                &_fix {
+                                    @apply bg-orange-600/40;
+                                }
+                                &_breaking {
+                                    @apply bg-red-800/40;
+                                }
                             }
                         }
                     }

@@ -25,6 +25,9 @@ body.enableSidebar {
     &.ruminetheme_1 {
         .conteiner3 {
             .content {
+                .news2 {
+                    @apply !mx-0;
+                }
                 @apply p-2;
             }
         }

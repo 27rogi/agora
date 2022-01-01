@@ -21,13 +21,14 @@ gulp.task("css", () => {
     .pipe(
       postcss([
         require("postcss-import"),
+        require("postcss-import-url"),
         require("tailwindcss/nesting"),
         require("tailwindcss"),
         require("autoprefixer"),
-        require("cssnano"),
       ])
     )
-    .pipe(sass({ sourceComments: true, outputStyle: 'compressed' }).on("error", sass.logError))
+
+    .pipe(sass({ outputStyle: 'compressed' }).on("error", sass.logError))
     .pipe(gulp.dest("dist/"));
 });
 
@@ -52,7 +53,7 @@ gulp.task("babel", () => {
       format: 'iife',
 
       // Show source code when debugging in browser
-      sourcemap: true
+      sourcemap: false
 
     }
   })

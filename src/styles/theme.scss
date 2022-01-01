@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap";
 
 @import "classic.scss";
 
@@ -6,6 +6,8 @@
 @import "./components/sidebar.scss";
 @import "./components/navbar.scss";
 @import "./components/forum.scss";
+@import "./components/news.scss";
+@import "./components/widget.scss";
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +18,19 @@ body.ruminetheme_1 {
     /* TopMenu */
     @include navbar;
 
+    /* Styles for floating menus and other DLE stuff */
+    @include widget;
+
+    img.emoji {
+        @apply inline;
+    }
+
+    div[style^="text-align:center;"] {
+        img {
+            @apply inline;
+        }
+    }
+
     .conteiner3 {
         @apply border-none rounded-xl flex flex-row max-w-screen-xl bg-gray-50 w-full overflow-visible backdrop-filter backdrop-blur-sm;
         .content {
@@ -25,6 +40,7 @@ body.ruminetheme_1 {
             }
             #dle-content {
                 @include forum;
+                @include news;
             }
         }
     }

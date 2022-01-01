@@ -1,5 +1,5 @@
 {
-  "sourceMaps": true,
+  "sourceMaps": false,
   "presets": [
     [
       "@babel/preset-env",
@@ -25,6 +25,12 @@
         "pragma": "h"
       }
     ],
-    ["@babel/plugin-proposal-class-properties"]
+    ["@babel/plugin-proposal-class-properties"],
+    [
+      "transform-inline-environment-variables",
+      {
+        "include": ["SOURCE_URL"]
+      }
+    ]
   ]
 }

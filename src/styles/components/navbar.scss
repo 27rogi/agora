@@ -1,6 +1,6 @@
 @mixin navbar {
     .topmenu-wrapper {
-        @apply flex flex-col h-auto bg-cave-500/90 shadow-none py-2 backdrop-filter backdrop-blur-sm;
+        @apply flex flex-col h-auto bg-cave-600/90 shadow-none py-2 backdrop-filter backdrop-blur-sm;
         .topmenu {
             @apply flex flex-row max-w-screen-xl w-full px-4 items-center;
             .topmenu-logo {
@@ -8,7 +8,10 @@
             }
             .topmenu-list {
                 & > li > ul {
-                    @apply bg-cave-500/90 shadow-none py-2 py-0 left-0 backdrop-filter backdrop-blur-sm;
+                    @apply rounded-b-xl bg-cave-500 shadow-none py-2 py-0 left-0 overflow-hidden;
+                    a:hover {
+                        @apply bg-cave-400;
+                    }
                 }
                 &.topmenu-nav {
                     @apply mr-auto;
@@ -18,6 +21,16 @@
                         @apply max-h-8;
                     }
                 }
+            }
+            .topmenu-msg,
+            .topmenu-list.topmenu-profile > li > a {
+                @apply bg-transparent transition-colors ease-light overflow-hidden no-underline !-my-2.5 !p-3;
+                &:hover {
+                    @apply bg-white/10;
+                }
+            }
+            .topmenu-msg-counter {
+                @apply m-2;
             }
         }
     }

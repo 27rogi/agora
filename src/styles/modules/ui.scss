@@ -31,6 +31,9 @@
                         }
                         &.active {
                             @apply bg-cave-50/90;
+                            &:hover {
+                                @apply bg-cave-100/80;
+                            }
                         }
                     }
                 }

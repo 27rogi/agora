@@ -29,7 +29,7 @@
             }
         }
         .forum-topicMsg {
-            @apply bg-white border-none rounded-xl flex flex-col shadow-xl p-4 transition-all ease-light shadow-gray-200/20 !mt-0;
+            @apply bg-white border-none rounded-xl flex flex-col shadow-xl p-4 transition-all ease-light shadow-gray-200/20 gap-2 !mt-0;
             div.clr {
                 @apply !mt-[5%];
             }
@@ -67,11 +67,27 @@
                 }
             }
             .forum-topicMsgDate {
-                @apply mt-auto my-2;
+                @apply items-center !font-sans !m-0;
                 a {
-                    @apply m-1 p-1;
+                    @apply rounded-md m-1 p-1 !text-cave-600;
                     &:hover {
-                        @apply text-cave-500;
+                        @apply !text-cave-500;
+                    }
+                }
+
+                p:nth-child(2) {
+                    @apply flex flex-row-reverse items-center;
+                    a {
+                        @apply flex flex-row py-1 px-2 gap-1 items-center !font-medium;
+                        &:not(.likeContent) {
+                            @apply opacity-30;
+                            &:hover {
+                                @apply opacity-100;
+                            }
+                        }
+                        &.likeContent {
+                            @apply rounded-md bg-cave-100/10 text-cave-600;
+                        }
                     }
                 }
             }

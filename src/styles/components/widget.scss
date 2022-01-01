@@ -1,0 +1,36 @@
+@mixin widget {
+    .ui-dialog.ui-widget {
+        @apply p-2;
+        &.ui-widget-content {
+            @apply border-none rounded-md bg-white/90 shadow-2xl shadow-gray-800/20 backdrop-blur-md backdrop-filter !font-sans;
+        }
+        .ui-widget-header {
+            @apply border-none rounded-md bg-cave-50 !font-sans;
+        }
+        .ui-dialog-content {
+            .ui-widget-content {
+                @apply border-none;
+            }
+
+            tr {
+                > td {
+                    &:first-child {
+                        @apply font-semibold;
+                    }
+                }
+            }
+        }
+        .ui-dialog-buttonpane {
+            @apply bg-transparent border-none rounded-md mx-0 px-0;
+            .ui-dialog-buttonset {
+                @apply flex flex-row;
+                button {
+                    @apply border-none rounded-lg font-sans bg-cave-50 w-full;
+                    &:hover {
+                        @apply bg-cave-50/90;
+                    }
+                }
+            }
+        }
+    }
+}
