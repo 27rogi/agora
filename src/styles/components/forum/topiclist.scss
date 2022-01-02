@@ -7,6 +7,11 @@
         .headerBox.boxList {
             @apply rounded-t-xl bg-cave-100/20 m-0 py-2;
         }
+        .boxTreeItem.read {
+            .treeIcon {
+                @apply bg-blend-overlay opacity-10;
+            }
+        }
         .separatorContentFixed,
         .sepBoxBot {
             @apply hidden;
@@ -61,6 +66,7 @@
                             }
                             .boxTreeItem {
                                 @apply rounded-none bg-gray-50 mb-0 py-4;
+
                                 .treeIcon {
                                     @apply rounded-xl bg-cave-100;
                                 }

@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [],
   theme: {
     fontFamily: {
@@ -6,10 +7,10 @@ module.exports = {
     },
     extend: {
       transitionTimingFunction: {
-        'light': 'cubic-bezier(0.33, 1, 0.68, 1)',
+        light: 'cubic-bezier(0.33, 1, 0.68, 1)',
       },
-            transitionProperty: {
-        'height': 'max-height'
+      transitionProperty: {
+        height: 'max-height'
       },
       colors: {
         rumc: {
@@ -37,6 +38,10 @@ module.exports = {
           900: "#1a1a1a",
         },
         cave: {
+          10: "#eaeef3",
+          20: "#d1dbe5",
+          30: "#9fb3c8",
+          40: "#86a0ba",
           50: "#6182a4",
           100: "#587999",
           200: "#4a6580",

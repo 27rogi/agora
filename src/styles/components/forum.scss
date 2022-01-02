@@ -65,41 +65,45 @@
             }
 
             @include message;
+        }
 
-            &#postAddTopic {
-                .form_add_comment {
-                    @apply flex flex-col-reverse !border-none;
-                    .bbcode_bullet {
-                        @apply rounded-xl flex flex-row flex-wrap h-full bg-cave-50/10 p-2 gap-1 overflow-visible !border-none;
-                        .bbcode_forum_text,
-                        .bbcode_forum {
-                            @apply overflow-visible !bg-transparent !border-none;
-                            li {
-                                @apply bg-white border-none rounded-md shadow-none transform-gpu transition-all ease-light scale-100;
-                                &:hover {
-                                    @apply scale-150;
-                                }
+        #message_add_form,
+        #message_edit_form {
+            .form_add_comment,
+            .BoxEditMsg {
+                @apply flex flex-col-reverse !border-none;
+                .bbcode_bullet {
+                    @apply rounded-xl flex flex-row flex-wrap h-full bg-cave-50/10 p-2 gap-1 overflow-visible !border-none;
+                    .bbcode_forum_text,
+                    .bbcode_forum {
+                        @apply overflow-visible !bg-transparent !border-none;
+                        li {
+                            @apply bg-white border-none rounded-md shadow-none transform-gpu transition-all ease-light scale-100;
+                            &:hover {
+                                @apply scale-150;
                             }
                         }
                     }
-                    textarea {
-                        @apply !font-sans;
+                }
+                textarea {
+                    @apply !font-sans;
+                }
+            }
+            .msgText {
+                @apply !border-none;
+            }
+            .BoxButtom {
+                @apply bg-transparent flex flex-row flex-wrap m-0 p-0 pt-2 items-center !border-none;
+                .b01,
+                #file_upload_button {
+                    @apply border-none rounded-xl bg-cave-50 py-2 !text-white;
+                    &:hover {
+                        @apply bg-cave-300;
                     }
                 }
-                .msgText {
-                    @apply !border-none;
-                }
-                .addMsgTopic.BoxButtom {
-                    @apply bg-transparent flex flex-row flex-wrap m-0 p-0 pt-2 items-center !border-none;
-                    .b01,
-                    #file_upload_button {
-                        @apply border-none rounded-xl bg-cave-50 py-2 !text-white;
-                        &:hover {
-                            @apply bg-cave-300;
-                        }
-                    }
 
-                    .b01,
+                &.addMsgTopic {
+                    > .b01,
                     #file_upload {
                         @apply w-[49.5%];
                     }
@@ -108,10 +112,10 @@
                             @apply w-full;
                         }
                     }
-                    .uploadify-queue,
-                    .uploadify-queue-item {
-                        @apply w-full;
-                    }
+                }
+                .uploadify-queue,
+                .uploadify-queue-item {
+                    @apply w-full;
                 }
             }
         }

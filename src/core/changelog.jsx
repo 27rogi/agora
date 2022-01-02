@@ -9,29 +9,17 @@ function Changelog() {
     const changes = [
         {
             type: changeTypes.new,
-            text: "Небольшие обновления дизайна."
+            text: "Добавлена темная тема для нового дизайна."
         },
         {
-            type: changeTypes.fix,
-            text: "(возможно) устранен баг при бесконечной загрузке IFrame на Firefox."
-        },
-        {
-            type: changeTypes.fix,
-            text: "Устранен баг с перекрытием меню."
-        },
-        {
-            type: changeTypes.fix,
-            text: "Устранен баг со скрытием подписей."
-        },
-        {
-            type: changeTypes.fix,
-            text: "Устранен баг с отображением эмодзи."
+            type: changeTypes.new,
+            text: "Улучшен дизайн профиля пользователя."
         },
     ]
 
     return (
         <div className="changelog">
-            <p className="changelog__title">Список изменений от 01.01.2022</p>
+            <p className="changelog__title">Список изменений от 02.01.2022</p>
             <ul>
                 {changes.map((change, key) => {
                     return (

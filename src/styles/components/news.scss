@@ -1,5 +1,25 @@
 @mixin news {
     .news2 {
-        @apply m-2;
+        @apply rounded-xl shadow-2xl shadow-gray-300/70 z-20 relative;
+        .box__title,
+        .about2,
+        .info23,
+        .newstetleh1 {
+            @apply w-full;
+        }
+
+        .reputation_post_set {
+            img {
+                @apply inline;
+            }
+        }
+
+        div[style="float: right;padding-right: 5px;padding-top: 5px;"] {
+            @apply m-1 mt-10 right-0 absolute;
+        }
+
+        .info23 {
+            @apply bg-cave-50/20;
+        }
     }
 }

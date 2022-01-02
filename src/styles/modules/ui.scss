@@ -1,11 +1,11 @@
 #script-config-screen {
-    @apply flex flex-col m-4 right-0 bottom-0 z-50 fixed;
+    @apply flex flex-col m-4 right-0 bottom-0 z-[70] fixed;
     .rumc-screen {
-        @apply rounded-xl flex flex-row m-auto max-w-md bg-gray-900/95 p-4 shadow-2xl shadow-stone-900/30 text-white/50 backdrop-filter backdrop-blur-md;
+        @apply rounded-xl flex flex-row m-auto max-w-lg bg-cave-800/95 p-4 shadow-2xl shadow-stone-900/30 text-white/50 backdrop-filter backdrop-blur-md;
         .screen__section {
             @apply flex flex-col;
             .screen__title {
-                @apply flex flex-row mb-2 items-center;
+                @apply flex flex-row mb-4 items-center;
                 h2 {
                     @apply font-sans font-semibold mr-auto text-lg text-white;
                     span {
@@ -14,11 +14,17 @@
                 }
                 .title__controls {
                     @apply flex flex-row text-white gap-2 items-center;
+                    a {
+                        @apply rounded-md bg-cave-50 text-sm py-1 px-2;
+                        &:hover {
+                            @apply bg-cave-50/90;
+                        }
+                    }
                 }
             }
 
             .screen__options {
-                @apply flex flex-row gap-2 items-start justify-center;
+                @apply flex flex-row flex-wrap gap-2 items-start justify-center;
                 .screen__option {
                     @apply rounded-xl flex flex-col bg-gray-600/60 p-2 gap-1 relative;
                     p {

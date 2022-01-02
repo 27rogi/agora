@@ -1,0 +1,67 @@
+@mixin profile {
+    > .news2,
+    form#userinfo > .news2 {
+        @apply flex flex-row flex-wrap w-full z-10 relative overflow-hidden;
+        .usergroup,
+        .profilered,
+        .userrepa {
+            @apply w-full;
+        }
+
+        .userrepa {
+            @apply border-none rounded-xl flex flex-row flex-wrap bg-cave-50/10 gap-8 overflow-hidden items-center justify-center;
+            .userrepa3 {
+                @apply border-none rounded-t-xl bg-cave-50/20 w-full p-2 px-4;
+            }
+            .userrepa2,
+            .userrepakarma2 {
+                @apply flex flex-col justify-center;
+            }
+
+            .userrepa2,
+            .userrepakarma2,
+            .stats2,
+            .stats1,
+            .forumstats,
+            .statsknop {
+                @apply m-0 p-0 relative;
+            }
+            .userrepakarma {
+                @apply flex flex-row m-0 items-center;
+                .userrepa5 {
+                    @apply m-0;
+                }
+            }
+
+            .statsknop {
+                @apply w-auto;
+                .statsknopka {
+                    @apply text-center w-full;
+                }
+            }
+        }
+
+        .usersdop {
+            @apply rounded-xl bg-cave-100/10 my-4 mx-4 w-full p-4;
+        }
+
+        .profonline {
+            @apply rounded-xl m-2;
+        }
+        .useravatar {
+            @apply flex h-auto m-auto w-auto p-0;
+        }
+        .userinfo {
+            @apply m-auto w-6/12;
+        }
+        .usermail {
+            @apply m-auto p-0 w-4/12;
+        }
+        .profilebut3 {
+            @apply h-auto w-full;
+            a {
+                @apply text-center w-full;
+            }
+        }
+    }
+}

@@ -1,6 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap";
 
-@import "classic.scss";
+/* Dark styles must rewrite all others */
+@import "./themes/classic.dark.scss";
+@import "./themes/dark.scss";
+
+@import "./themes/classic.scss";
 
 /* Components */
 @import "./components/sidebar.scss";
@@ -8,6 +12,7 @@
 @import "./components/forum.scss";
 @import "./components/news.scss";
 @import "./components/widget.scss";
+@import "./components/profile.scss";
 
 @tailwind base;
 @tailwind components;
@@ -39,8 +44,10 @@ body.ruminetheme_1 {
                 @apply hidden;
             }
             #dle-content {
+                @apply overflow-hidden;
                 @include forum;
                 @include news;
+                @include profile;
             }
         }
     }

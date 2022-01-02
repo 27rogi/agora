@@ -4,6 +4,10 @@ body.ruminetheme_1.orange {
             #22333a;
     }
 
+    .top-background {
+        @apply sepia-[0.5] brightness-[0.8];
+    }
+
     .topmenu-wrapper {
         @apply bg-stone-800/90;
         .topmenu {
@@ -219,25 +223,28 @@ body.ruminetheme_1.orange {
                                 }
                             }
                         }
-                        &#postAddTopic {
-                            .form_add_comment {
-                                .bbcode_bullet {
-                                    @apply bg-rumc-50/10;
-                                    .bbcode_forum_text,
-                                    .bbcode_forum {
-                                        li {
-                                            @apply bg-white;
-                                        }
+                    }
+
+                    #message_add_form,
+                    #message_edit_form {
+                        .form_add_comment,
+                        .BoxEditMsg {
+                            .bbcode_bullet {
+                                @apply bg-rumc-50/10;
+                                .bbcode_forum_text,
+                                .bbcode_forum {
+                                    li {
+                                        @apply bg-white;
                                     }
                                 }
                             }
-                            .addMsgTopic.BoxButtom {
-                                .b01,
-                                #file_upload_button {
-                                    @apply bg-rumc-400/80 !text-white;
-                                    &:hover {
-                                        @apply bg-rumc-300;
-                                    }
+                        }
+                        .BoxButtom {
+                            .b01,
+                            #file_upload_button {
+                                @apply bg-rumc-400/80 !text-white;
+                                &:hover {
+                                    @apply bg-rumc-300;
                                 }
                             }
                         }

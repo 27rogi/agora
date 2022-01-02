@@ -1,0 +1,303 @@
+@mixin fixColors {
+    & {
+        @apply dark:brightness-[130%] dark:saturate-[300%];
+        *[style^="color:Black"] {
+            @apply dark:!text-stone-500;
+        }
+    }
+}
+
+body.ruminetheme_1 {
+    textarea,
+    input,
+    select {
+        @apply dark:bg-cave-700 dark:text-cave-10 dark:!border-cave-200;
+    }
+    .ui-dialog.ui-widget {
+        &.ui-widget-content {
+            @apply dark:!bg-cave-700/80 dark:!shadow-none;
+        }
+        tr {
+            td {
+                @apply dark:text-cave-10;
+                a {
+                    @apply dark:text-cave-40;
+                }
+            }
+            &:nth-child(2) {
+                > td {
+                    &:nth-child(2) {
+                        b {
+                            @include fixColors();
+                        }
+                        img {
+                            @apply inline;
+                        }
+                    }
+                }
+            }
+        }
+        .ui-widget-header {
+            @apply dark:!bg-cave-300;
+        }
+        .ui-dialog-buttonpane {
+            .ui-dialog-buttonset {
+                button {
+                    @apply dark:!bg-cave-300;
+                    &:hover {
+                        @apply dark:!bg-cave-300/90;
+                    }
+                }
+            }
+        }
+    }
+
+    .conteiner3 {
+        @apply dark:bg-cave-800;
+        .content {
+            .news2 {
+                @apply dark:bg-cave-700 dark:text-cave-10 dark:!shadow-none;
+                .info23 {
+                    @apply border-none dark:bg-cave-600;
+                }
+                .userrepa3 {
+                    @apply dark:bg-cave-400;
+                }
+                .statsknopka {
+                    @apply dark:bg-cave-400 dark:border-cave-400;
+                }
+            }
+        }
+        .content #dle-content #bullet_energy {
+            @apply dark:text-white/80;
+
+            .uploadify-queue-item {
+                @apply dark:bg-cave-50/20;
+            }
+
+            a {
+                @apply dark:text-cave-30;
+                &:hover {
+                    @apply dark:text-cave-20;
+                }
+            }
+
+            .blockRight.userOnlines {
+                @apply dark:bg-cave-50/10;
+                a:not(.forum-topicMsgPict .popup_profile) {
+                    @apply dark:text-cave-50;
+                    &:hover {
+                        @apply dark:bg-cave-50/20 dark:ring-cave-50/20;
+                    }
+                }
+                .innerts {
+                    .userClin {
+                        p {
+                            @apply dark:font-medium dark:!text-cave-20;
+                        }
+                        ul a {
+                            @include fixColors();
+                        }
+                    }
+                    .statForum {
+                        @apply dark:!text-cave-20;
+                    }
+                }
+                h3 {
+                    @apply dark:!bg-cave-50/20 dark:!text-cave-10;
+                }
+            }
+
+            .forum-GroupList {
+                @include fixColors();
+            }
+
+            a,
+            .contentBoxTopicMessageList {
+                .forum-topicMsgCont .forum-topicMsg {
+                    #forum-topicMsgShtuff div[id^="MsgTextBox"] {
+                        .EditMsgView {
+                            @apply dark:!text-cave-20/80;
+                        }
+                        .title_quote {
+                            @apply dark:!bg-cave-100/20 dark:!text-white/90;
+                        }
+                        .quote {
+                            @apply dark:!bg-cave-50/10 dark:!text-cave-10/80;
+                        }
+                    }
+
+                    .forum-topicMsgDate {
+                        a {
+                            @apply dark:!text-cave-40;
+                            &:hover {
+                                @apply dark:!text-cave-30;
+                            }
+                        }
+
+                        p:nth-child(2) {
+                            a {
+                                &.likeContent,
+                                &[onclick^="fast_insert"] {
+                                    @apply dark:bg-cave-40/10 dark:text-cave-40;
+                                }
+                            }
+                        }
+                    }
+
+                    &#postAddTopic .form_add_comment .bbcode_bullet {
+                        @apply dark:bg-cave-500;
+                    }
+
+                    ol.bbcode_forum li,
+                    ol.bbcode_forum_text li {
+                        @apply dark:!bg-cave-400;
+                        span {
+                            @apply dark:invert-[0.75];
+                        }
+                    }
+                }
+            }
+
+            .forum_speedbar {
+                li {
+                    a,
+                    .arrow::before {
+                        @apply dark:!text-cave-40;
+                    }
+                }
+            }
+
+            .paginator .pagination_forum li.active {
+                @apply dark:bg-cave-40 dark:text-cave-600;
+            }
+
+            .forum-topicMsgStat {
+                p {
+                    span {
+                        @apply dark:text-cave-50;
+                    }
+                    &:nth-child(2) {
+                        @include fixColors;
+                    }
+                }
+            }
+
+            .signature {
+                @apply dark:border-t-cave-500;
+            }
+
+            .treeNameList {
+                @apply dark:text-gray-100/90;
+            }
+            #desTtee {
+                @apply dark:text-gray-400/70;
+            }
+
+            .forum-topicMsg {
+                @apply dark:!bg-cave-700 dark:!shadow-none dark:!text-white/95;
+                a {
+                    @apply dark:!text-cave-40;
+                }
+            }
+        }
+    }
+
+    .conteiner3 .content #dle-content #bullet_energy .contentBoxTopicList {
+        a {
+            @apply dark:text-cave-10;
+        }
+        &:not(.treeBox) {
+            @apply dark:bg-cave-100/10;
+        }
+        .headerBox.boxList {
+            @apply dark:!bg-cave-600/20;
+        }
+        &.treeBox {
+            .tree {
+                @apply dark:bg-cave-100/10;
+                .treeTitl {
+                    h3 {
+                        @apply dark:text-cave-10;
+                    }
+                    .treeDesc {
+                        @apply dark:text-cave-20/50;
+                    }
+                }
+                ol {
+                    li {
+                        &.treeItem {
+                            .countBox dt {
+                                @apply dark:text-cave-10;
+                            }
+                            .countBox dd {
+                                @apply dark:text-cave-30;
+                            }
+                            .boxTreeItem {
+                                @apply dark:bg-cave-800/50;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .listTopicBlock {
+            .topicList {
+                @apply dark:border-b-transparent dark:bg-cave-800/50;
+                .topicPublicInfo {
+                    @apply dark:text-cave-30;
+                }
+                .boxTopic.statistic {
+                    @apply dark:!bg-transparent;
+                    p {
+                        @apply dark:text-cave-10 dark:!border-none;
+                    }
+                    strong {
+                        @apply dark:text-cave-30;
+                    }
+                }
+            }
+        }
+        .treeIcon {
+            @apply dark:bg-blend-overlay dark:!bg-cave-400/50 dark:!shadow-none;
+        }
+        .replyLast {
+            @apply dark:!border-none dark:!bg-cave-500/50;
+        }
+    }
+
+    .forumBoxLastInfo {
+        a {
+            @apply dark:text-cave-10;
+        }
+        h3 {
+            text-shadow: none;
+            @apply dark:!text-cave-10;
+        }
+        table {
+            th {
+                @apply dark:bg-cave-900/50;
+            }
+            tr {
+                td {
+                    @apply dark:bg-cave-900/50;
+                    p,
+                    &.topicLastPost p strong {
+                        @apply dark:!text-cave-30;
+                    }
+                }
+            }
+        }
+        p,
+        td,
+        th {
+            @apply dark:!text-cave-40/80;
+        }
+    }
+}
+
+body.hideSignatures .signature {
+    &::before {
+        @apply dark:from-transparent dark:to-cave-700;
+    }
+}

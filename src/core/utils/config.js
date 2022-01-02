@@ -5,6 +5,7 @@ const ConfigApplyEvent = new Event('ConfigApplyEvent');
 const Config = {
     init() {
         const defaultConfig = {
+            dark: false,
             loader: true,
             redesign: true,
             theme: 'default',
@@ -39,7 +40,10 @@ const Config = {
     },
     apply() {
         logger.info('Applying changes to config', 'Config')
+
+        // TODO: Dangerous method of class reset, I should find something better.
         document.body.setAttribute("class", "");
+        document.documentElement.setAttribute("class", "");
 
         if (this.store.redesign) {
             document.body.classList.add("ruminetheme_1");
@@ -48,6 +52,9 @@ const Config = {
             }
         } else if (document.head.querySelector(`link[href="${process.env.SOURCE_URL}/dist/theme.css"]`)) {
             document.head.querySelector(`link[href="${process.env.SOURCE_URL}/dist/theme.css"]`).remove();
+        }
+        if (this.store.dark) {
+            document.documentElement.classList.add("dark");
         }
         if (this.store.theme) {
             if (this.store.theme === "orange") document.body.classList.add("orange");

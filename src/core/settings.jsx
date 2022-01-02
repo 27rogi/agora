@@ -34,14 +34,14 @@ class SettingsScreen extends Component {
 
         const ThemeButton = props => {
             return html`
-            <button className=${(this.state.theme===props.theme) ? 'active' : null} onClick=${()=> this.setConfigValue('theme',
+            <button className=${(this.state.theme === props.theme) ? 'active' : null} onClick=${() => this.setConfigValue('theme',
                 props.theme)}>${names[props.theme]}</button>
             `;
         }
 
         const OptionCheckbox = props => {
             return html`
-            <button className=${this.state[props.option] ? 'active' : null} onClick=${()=> this.setConfigValue(props.option,
+            <button className=${this.state[props.option] ? 'active' : null} onClick=${() => this.setConfigValue(props.option,
                 !this.state[props.option])}>${props.title}</button>
             `
         }
@@ -53,10 +53,10 @@ class SettingsScreen extends Component {
                         <h2><b>Project Agora</b> <span>(Настройки)</span></h2>
                         <div className="title__controls">
                             <a href="javascript:void(0);" onClick=${this.toggleChangelog}>
-                                <i class="fa fa-th-list fa-2x"></i>
+                                <i class="fa fa-th-list fa-1x"></i>
                             </a>
-                            <a href="javascript:void(0);" onClick=${() => ui.toggleSettingsScreen()}>
-                                <i class="fa fa-times-circle fa-2x"></i>
+                            <a href="javascript:void(0);" onClick=${()=> ui.toggleSettingsScreen()}>
+                                <i class="fa fa-times-circle fa-1x"></i>
                             </a>
                         </div>
                     </div>
@@ -73,13 +73,19 @@ class SettingsScreen extends Component {
                             <${ThemeButton} theme="orange" />
                         </div>` : null}
             
+                        ${(this.state.redesign) ? html`
+                        <div className="screen__option">
+                            <p>Дополнения темы</p>
+                            <${OptionCheckbox} title="Темный режим (beta)" option="dark" />
+                        </div>` : null}
+            
                         <div className="screen__option">
                             <p>Дополнения</p>
-                            <${OptionCheckbox} title="Ожидать загрузки страницы" option="loader" />
-                            <${OptionCheckbox} title="Использовать новую тему" option="redesign" />
+                            <${OptionCheckbox} title="Показывать загрузку" option="loader" />
+                            <${OptionCheckbox} title="Обновленная тема" option="redesign" />
                             <${OptionCheckbox} title="Сворачивать подписи" option="hideSignatures" />
                             <${OptionCheckbox} title="Скрывать статистику пользователей" option="hideStats" />
-                            <${OptionCheckbox} title="Показывать сайдбар" option="sidebar" />
+                            <${OptionCheckbox} title="Показывать боковое меню" option="sidebar" />
                         </div>
                     </div>
                 </div>

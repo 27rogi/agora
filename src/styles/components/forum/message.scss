@@ -33,6 +33,9 @@
             div.clr {
                 @apply !mt-[5%];
             }
+            .msgText {
+                @apply bg-transparent;
+            }
             #forum-topicMsgShtuff {
                 @apply m-0 p-0;
                 div[id^="MsgTextBox"] {
@@ -67,7 +70,7 @@
                 }
             }
             .forum-topicMsgDate {
-                @apply items-center !font-sans !m-0;
+                @apply bg-transparent bg-none items-center !font-sans !m-0 !p-0;
                 a {
                     @apply rounded-md m-1 p-1 !text-cave-600;
                     &:hover {
@@ -75,17 +78,16 @@
                     }
                 }
 
+                p:nth-child(1) {
+                    @apply mr-auto;
+                }
+
                 p:nth-child(2) {
-                    @apply flex flex-row-reverse items-center;
+                    @apply contents items-center;
                     a {
                         @apply flex flex-row py-1 px-2 gap-1 items-center !font-medium;
-                        &:not(.likeContent) {
-                            @apply opacity-30;
-                            &:hover {
-                                @apply opacity-100;
-                            }
-                        }
-                        &.likeContent {
+                        &.likeContent,
+                        &[onclick^="fast_insert"] {
                             @apply rounded-md bg-cave-100/10 text-cave-600;
                         }
                     }
