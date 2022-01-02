@@ -2482,7 +2482,7 @@ cssnano@^5.0.14:
     lilconfig "^2.0.3"
     yaml "^1.10.2"
 
-csso@^4.2.0:
+csso@^4.0.0, csso@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/csso/-/csso-4.2.0.tgz#ea3a561346e8dc9f546d6febedd50187cf389529"
   integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
@@ -3712,6 +3712,15 @@ gulp-cli@^2.2.0, gulp-cli@^2.3.0:
     semver-greatest-satisfied-range "^1.1.0"
     v8flags "^3.2.0"
     yargs "^7.1.0"
+
+gulp-csso@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-csso/-/gulp-csso-4.0.1.tgz#c2ac2b5f7138ed04073ed8f7cf89c12f716580d0"
+  integrity sha512-Kg8gqmd6XcUlMTdBbqdCEcpHumc8ytc4khgm9AXeCjl8eHx7b6tC11y8haizFI+Zw/cSHL6HCj7GwGLwxxBUFQ==
+  dependencies:
+    csso "^4.0.0"
+    plugin-error "^1.0.0"
+    vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-postcss@^9.0.1:
   version "9.0.1"
@@ -5601,7 +5610,7 @@ pino@^7.6.1:
     sonic-boom "^2.2.1"
     thread-stream "^0.13.0"
 
-plugin-error@^1.0.1:
+plugin-error@^1.0.0, plugin-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-1.0.1.tgz#77016bd8919d0ac377fdcdd0322328953ca5781c"
   integrity sha512-L1zP0dk7vGweZME2i+EeakvUNqSrdiI3F91TwEoYiGrAfUXmVv6fJIq4g82PAXxNsWOp0J7ZqQy/3Szz0ajTxA==

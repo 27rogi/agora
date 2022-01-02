@@ -10,6 +10,7 @@ const { babel } = require('@rollup/plugin-babel');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 const { uglify } = require("rollup-plugin-uglify");
 const eslint = require('@rollup/plugin-eslint');
+const cleanCSS = require('gulp-csso');
 
 // Cache needs to be initialized outside of the Gulp task
 let cache;
@@ -29,6 +30,7 @@ gulp.task("css", () => {
     )
 
     .pipe(sass({ outputStyle: 'compressed' }).on("error", sass.logError))
+    .pipe(cleanCSS())
     .pipe(gulp.dest("dist/"));
 });
 
