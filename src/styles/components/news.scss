@@ -8,6 +8,15 @@
             @apply w-full;
         }
 
+        .box__title {
+            a {
+                @apply rounded-xl bg-cave-300 mb-2 py-2 text-white/90;
+                &:hover {
+                    @apply text-opacity-100;
+                }
+            }
+        }
+
         .reputation_post_set {
             img {
                 @apply inline;

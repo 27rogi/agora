@@ -13,6 +13,11 @@ body.ruminetheme_1 {
     select {
         @apply dark:bg-cave-700 dark:text-cave-10 dark:!border-cave-200;
     }
+
+    .emoji {
+        @apply bg-white mx-1 p-1 overflow-hidden !rounded-xl;
+    }
+
     .ui-dialog.ui-widget {
         &.ui-widget-content {
             @apply dark:!bg-cave-700/80 dark:!shadow-none;
@@ -58,7 +63,7 @@ body.ruminetheme_1 {
             .news2 {
                 @apply dark:bg-cave-700 dark:text-cave-10 dark:!shadow-none;
                 .info23 {
-                    @apply border-none dark:bg-cave-600;
+                    @apply dark:bg-cave-600;
                 }
                 .userrepa3 {
                     @apply dark:bg-cave-400;

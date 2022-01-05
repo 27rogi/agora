@@ -1,7 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700;900&display=swap";
 
 /* Dark styles must rewrite all others */
-@import "./themes/classic.dark.scss";
 @import "./themes/dark.scss";
 
 @import "./themes/classic.scss";
@@ -14,17 +13,20 @@
 @import "./components/widget.scss";
 @import "./components/profile.scss";
 
-@tailwind base;
-@tailwind components;
+@tailwind utilities;
 
 body.ruminetheme_1 {
-    @apply font-sans;
+    @apply font-sans selection:bg-cave-300/20 selection:text-cave-800/90;
 
     /* TopMenu */
     @include navbar;
 
     /* Styles for floating menus and other DLE stuff */
     @include widget;
+
+    input {
+        @apply rounded-md text-cave-900 accent-cave-100;
+    }
 
     img.emoji {
         @apply inline;
@@ -59,7 +61,7 @@ body.ruminetheme_1 {
         @apply border-none rounded-xl bg-cave-50/10 mt-2 mb-0 w-full p-2 !font-sans;
         h3 {
             text-shadow: none;
-            @apply rounded-xl font-extrabold !bg-none !border-none !font-sans !my-1 !mx-2 !text-lg !p-2 !text-cave-600;
+            @apply rounded-xl font-extrabold !bg-none !border-none !font-sans !my-1 !mx-0.5 !text-lg !p-2 !text-cave-600;
         }
         table {
             @apply border-none rounded-xl bg-cave-50/10 p-2 overflow-hidden;

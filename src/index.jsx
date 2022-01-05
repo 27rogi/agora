@@ -1,5 +1,7 @@
 import Config from './core/utils/config.js';
 import ui from './core/ui.jsx';
+import Designer from './core/utils/designer.js';
+import { colord } from 'colord';
 
 (function () {
     document.head.insertAdjacentHTML("beforeend", `<link href="${process.env.SOURCE_URL}/dist/base.css" type="text/css" rel="stylesheet">`)
@@ -14,9 +16,22 @@ import ui from './core/ui.jsx';
         }
         config.apply();
 
+        if (config.store.recolor && config.store.colors.primary) {
+            window.addEventListener('load', () => {
+                if (colord(config.store.colors.primary).isValid()) {
+                    Designer.capturePallette().makeNewPalette(
+                        config.store.colors.primary,
+                        config.store.theme === "default" ? "cave" : "stone",
+                        config.store.dark
+                    ).applyPalette();
+                }
+            });
+        }
+
+
         if (config.store.hideSignatures) {
-            // Fix for signatures where some elements are not inside it's div
             window.addEventListener('DOMContentLoaded', () => {
+                // Fix for signatures where some elements are not inside it's div
                 if (document.body.querySelectorAll("#forum-topicMsgShtuff")) {
                     for (const message of document.body.querySelectorAll("#forum-topicMsgShtuff")) {
                         const signature = message.querySelector(".signature");
@@ -31,7 +46,6 @@ import ui from './core/ui.jsx';
                 }
             });
         }
-
         ui.renderSettingsButton();
     }
 })();

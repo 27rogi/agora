@@ -1,7 +1,7 @@
 #script-config-screen {
     @apply flex flex-col m-4 right-0 bottom-0 z-[70] fixed;
     .rumc-screen {
-        @apply rounded-xl flex flex-row m-auto max-w-lg bg-cave-800/95 p-4 shadow-2xl shadow-stone-900/30 text-white/50 backdrop-filter backdrop-blur-md;
+        @apply rounded-xl flex flex-row m-auto max-w-xl bg-cave-800/95 p-4 shadow-2xl shadow-stone-900/30 text-white/50 backdrop-filter backdrop-blur-md;
         .screen__section {
             @apply flex flex-col;
             .screen__title {
@@ -26,14 +26,14 @@
             .screen__options {
                 @apply flex flex-row flex-wrap gap-2 items-start justify-center;
                 .screen__option {
-                    @apply rounded-xl flex flex-col bg-gray-600/60 p-2 gap-1 relative;
+                    @apply rounded-xl flex flex-col bg-cave-100/20 p-2 gap-1 relative;
                     p {
                         @apply font-sans font-semibold text-center text-base text-white/90;
                     }
                     button {
-                        @apply rounded-md font-medium bg-gray-800/50 text-white text-sm py-2 px-4;
+                        @apply rounded-md font-medium bg-cave-100/5 text-white text-sm py-2 px-4;
                         &:hover {
-                            @apply bg-gray-800/90;
+                            @apply bg-cave-200/90;
                         }
                         &.active {
                             @apply bg-cave-50/90;
@@ -41,6 +41,9 @@
                                 @apply bg-cave-100/80;
                             }
                         }
+                    }
+                    input {
+                        @apply border-none rounded-md w-full;
                     }
                 }
             }
@@ -55,16 +58,19 @@
                     li {
                         @apply flex flex-row gap-2 items-center;
                         .badge {
-                            @apply rounded-md bg-cave-50 flex-shrink-0 py-1 px-2 text-gray-50/90;
+                            @apply rounded-md bg-cave-50/20 flex-shrink-0 py-1 px-2 text-gray-50/90;
                             &_new {
-                                @apply bg-green-600/40;
+                                @apply bg-green-600/10;
                             }
                             &_fix {
-                                @apply bg-orange-600/40;
+                                @apply bg-orange-500/20;
                             }
                             &_breaking {
-                                @apply bg-red-800/40;
+                                @apply bg-[rgb(153,27,27)]/20;
                             }
+                        }
+                        p:not(.badge) {
+                            @apply leading-none py-1;
                         }
                     }
                 }

@@ -64,7 +64,7 @@ function toggleLoader() {
             width: "100%",
             height: "100%",
             bottom: "0px",
-            background: 'linear-gradient(0deg, rgba(24,32,41,1) 0%, rgba(24,32,41,0.9) 100%)',
+            background: 'linear-gradient(0deg, rgba(35,35,35,1) 0%, rgba(35,35,35,0.8) 100%)',
             WebkitBackdropFilter: "blur(12px)",
             backdropFilter: "blur(12px)"
         },

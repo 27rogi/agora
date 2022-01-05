@@ -19,6 +19,10 @@
         .listTopicBlock {
             .topicList {
                 @apply rounded-none bg-gray-50 p-2;
+                &.read .treeIcon {
+                    background-image: url(https://ru-minecraft.ru/templates/new2/bullet_energy/images/icons/unread.png);
+                    @apply opacity-30;
+                }
                 &:last-child {
                     @apply rounded-b-xl;
                 }
@@ -63,6 +67,10 @@
                                 .boxTreeItem {
                                     @apply rounded-b-xl;
                                 }
+                            }
+                            &.read .boxTreeItem .treeIcon {
+                                background-image: url(https://ru-minecraft.ru/templates/new2/bullet_energy/images/icons/unread.png);
+                                @apply opacity-30;
                             }
                             .boxTreeItem {
                                 @apply rounded-none bg-gray-50 mb-0 py-4;

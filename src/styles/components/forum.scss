@@ -26,7 +26,7 @@
                 li {
                     @apply mr-0 text-center w-full;
                     &.active {
-                        @apply border-none rounded-lg font-semibold bg-rumc-100/40 py-1 text-rumc-600;
+                        @apply border-none rounded-lg font-semibold bg-orange-100/40 py-1 text-orange-600;
                     }
                     a {
                         @apply border-none rounded-lg font-semibold bg-cave-100/10 py-1;

@@ -1,12 +1,14 @@
 body.hideSignatures {
     .signature {
-        transition: max-height 2s ease-out;
+        transition: max-height 0.5s ease-out;
         @apply max-h-16 opacity-50 ease-light relative overflow-hidden;
         &::before {
+            transition: max-height 2s ease-out;
             content: "";
-            @apply bg-gradient-to-b from-transparent to-white h-full w-full inset-0 z-50 pointer-events-none absolute;
+            @apply bg-gradient-to-b from-transparent to-white h-full w-full opacity-100 inset-0 z-50 pointer-events-none absolute;
         }
         &:hover {
+            transition: max-height 1.5s ease-out;
             @apply max-h-screen opacity-100;
             &::before {
                 @apply opacity-0;

@@ -12,6 +12,10 @@ const Config = {
             hideSignatures: true,
             hideStats: false,
             sidebar: true,
+            recolor: null,
+            colors: {
+                primary: null,
+            }
         }
 
         if (window.localStorage.getItem('rumctheme')) {

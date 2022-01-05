@@ -1,6 +1,6 @@
 @mixin footer {
     .blockRight.userOnlines {
-        @apply rounded-xl bg-cave-50/10 !font-sans !mx-2;
+        @apply rounded-xl bg-cave-50/10 !font-sans !mx-0;
         a:not(.forum-topicMsgPict .popup_profile) {
             @apply px-0.5 text-cave-50;
             &:hover {

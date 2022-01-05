@@ -15,6 +15,14 @@
                 }
                 &.topmenu-nav {
                     @apply mr-auto;
+                    li {
+                        a {
+                            @apply rounded-md rounded-b-none;
+                            &:hover {
+                                @apply bg-cave-300/70;
+                            }
+                        }
+                    }
                 }
                 &.topmenu-profile {
                     img {

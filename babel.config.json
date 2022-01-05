@@ -2,9 +2,18 @@
   "sourceMaps": false,
   "presets": [
     [
+      "minify",
+      {
+        "builtIns": false
+      }
+    ],
+    [
       "@babel/preset-env",
       {
-        "targets": "> 0.25%, not dead"
+        "targets": "since 2015",
+        "bugfixes": true,
+        "debug": false,
+        "useBuiltIns": false
       }
     ],
     [
